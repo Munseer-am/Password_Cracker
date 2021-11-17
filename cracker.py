@@ -6,7 +6,7 @@ def Passwd_Cracker():
 	str = f.read()
 	for word in str.split():
 		s = word.decode("utf-8")
-		enc = hashlib.md5(word.encode()).hexdigest()
+		enc = hashlib.md5(word).hexdigest()
 		if enc == hash:
 			print('\033[0;32mpassword found')
 			print(f'\033[0;32mpassword is: {s}')
